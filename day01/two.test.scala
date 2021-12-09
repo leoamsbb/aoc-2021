@@ -1,5 +1,5 @@
-using resourceDir "./data"
-using lib org.scalatest::scalatest:3.2.10
+// using resourceDir "./data"
+// using lib org.scalatest::scalatest:3.2.10
 
 
 import scala.io.Source

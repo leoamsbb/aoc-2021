@@ -12,7 +12,6 @@ def loop(acc: Int, head: Int, data: Seq[Int]): Int = {
 
 def run(data: Seq[String]): Int = {
   val d = data.map(_.toInt)
-  d.foreach(println)
   loop(0, d.head, d.tail)
 }
 

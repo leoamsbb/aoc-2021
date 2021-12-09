@@ -1,5 +1,5 @@
-// using resource "./data"
-// using lib org.scalatest::scalatest:3.2.10
+using resourceDir "./data"
+using lib org.scalatest::scalatest:3.2.10
 
 import scala.io.Source
 
@@ -12,10 +12,10 @@ class OneSpec extends AnyFreeSpec {
     .getLines
     .toSeq
 
-  // "run" - {
-  //   "" in {
-  //     val result = one.run(testData)
-  //     result mustEqual 150
-  //   }
-  // }
+  "run" - {
+    "" in {
+      val result = one.run(testData)
+      result mustEqual 7
+    }
+  }
 }

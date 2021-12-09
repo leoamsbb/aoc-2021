@@ -1,0 +1,24 @@
+bin/
+
+# Scala/SBT specific
+project/
+target/
+build/
+
+# Mill build tool
+out/
+
+# tools
+.bloop/
+*.bsp/
+.metals/
+project/metals.sbt # Don't force metals on everyone
+.idea/
+.vscode/
+**/.scala/**
+
+# Ignore worksheets for hacking around purposes
+*.worksheet.sc
+
+# OS
+.DS_Store

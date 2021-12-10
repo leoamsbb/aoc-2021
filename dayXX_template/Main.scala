@@ -1,4 +1,4 @@
-// using resource "./data"
+// using resourceDir "./data"
 
 import scala.io.Source
 

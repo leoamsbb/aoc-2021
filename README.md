@@ -15,7 +15,7 @@ Tooling
 Run the command below, substituting the day number where indicated.
 
 ```
-./newday.sc -- <day of the month>
+./newday.sc -- dayXX
 ```
 
 # Running tests

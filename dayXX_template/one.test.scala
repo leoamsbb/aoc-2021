@@ -8,7 +8,7 @@ import org.scalatest.matchers.must.Matchers._
 
 class OneSpec extends AnyFreeSpec {
   val testData = Source
-    .fromResource("data_test_one")
+    .fromResource("data_test")
     .getLines
     .toSeq
 

@@ -1,6 +1,10 @@
 
+case class Point(x: Int, y: Int) {
+  def xStep(step: Int) = copy(x = x + step)
 
-case class Point(x: Int, y: Int)
+  def yStep(step: Int) = copy(y = y + step)
+
+}
 
 object Point {
   implicit def apply(x: String, y: String): Point = {
@@ -12,6 +16,9 @@ case class Line(from: Point, to: Point) {
   def isXcommon = from.x == to.x
 
   def isYCommon = from.y == to.y
+
+  def xStep = if (from.x < to.x) 1 else -1
+  def yStep = if (from.y < to.y) 1 else -1
 
   def getPoints: Seq[Point] = {
     if (isXcommon) {
@@ -25,8 +32,15 @@ case class Line(from: Point, to: Point) {
         x <- from.x to to.x
       } yield Point(x, y)
     } else {
-      Seq(from, to)
+      diagonal(from, from :: Nil)
     }
+  }
+
+  def diagonal(current: Point, acc: List[Point]): List[Point] = {
+    if (current == to)
+      current :: acc
+    else
+      diagonal(current.xStep(xStep).yStep(yStep), current :: acc)
   }
 }
 
@@ -60,6 +74,7 @@ def run(data: Seq[String]): Int = {
     .map { case (k, v) => (k, v.size) }
     .flatMap {
       case (_, v) if (v >= 2) => Option(v)
-      case _ => None}
+      case _ => None
+    }
     .size
 }

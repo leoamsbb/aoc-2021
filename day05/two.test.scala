@@ -12,11 +12,11 @@ class TwoSpec extends AnyFreeSpec {
     .getLines
     .toSeq
 
-  /*"run" - {
+  "run" - {
     "" in {
       val result = two.run(testData)
 
-      result mustEqual 900
+      result mustEqual 12
     }
-  }*/
+  }
 }

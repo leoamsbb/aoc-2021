@@ -15,5 +15,5 @@ object Main extends App {
     .getLines
     .toSeq
 
-//  println("Part two: " + two.run(data_puzzle_input_two))
+  println("Part two: " + two.run(data_puzzle_input_two))
 }
